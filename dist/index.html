@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f4ec"><title>Poké Clicker — A little click. A grand adventure.</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header><a class="brand" href="./"><span class="mini-ball"></span> poké<span>clicker</span><sup> / </sup><small>THE IDLE ADVENTURE</small></a><div class="header-actions"><span id="save-status"><i></i> Saved locally</span><button class="icon-button" id="settings" aria-label="Open save settings">⚙</button></div></header>
+<main>
+<div class="page-heading"><div><div class="eyebrow">YOUR NEXT ADVENTURE STARTS WITH A CLICK</div><h1>Small clicks. <em>Big discoveries.</em></h1></div><span class="region"><i></i> KANTO REGION</span></div>
+<div class="game-layout">
+<section class="play-column" aria-label="Clicker">
+<div class="adventure-card">
+<div class="scene-label"><span class="live-dot"></span> ROUTE 01 <span class="scene-weather">☀ &nbsp; A good day to explore</span></div>
+<div class="balance"><span class="eyebrow">YOUR POKÉCOINS</span><div><span class="coin-symbol">₽</span> <strong id="coins">0</strong></div><span class="rate"><span id="rate">0</span> coins per second</span></div>
+<div class="cloud cloud-one"></div><div class="cloud cloud-two"></div><div class="hill hill-back"></div><div class="hill hill-front"></div><div class="tree tree-one"></div><div class="tree tree-two"></div><div class="tree tree-three"></div>
+<div class="ball-zone"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><span class="spark spark-one">✦</span><span class="spark spark-two">✧</span><button id="pokeball" aria-label="Click Pokéball to earn Pokécoins"><span class="ball-shine"></span><span class="ball-band"></span><span class="ball-center"></span></button><div class="ball-shadow"></div></div>
+<div class="click-hint"><strong>Click. Collect. Become a legend.</strong><span>+<b id="power">1</b> Pokécoin per click <span class="key-hint">SPACE</span></span></div>
+<div class="scene-bottom"><span>✦ &nbsp; Every great trainer starts somewhere.</span><span>01 — 06</span></div>
+</div>
+<div class="stats"><div><span>LIFETIME EARNED</span><strong><span class="small-coin">₽</span> <span id="earned">0</span></strong></div><div><span>TOTAL CLICKS</span><strong id="clicks">0</strong></div><div><span>TEAM MEMBERS</span><strong id="members">0</strong></div></div>
+<section class="milestone"><div class="milestone-icon">✧</div><div class="milestone-content"><div><h3 id="milestone-title">The first of many</h3><span id="milestone-count">0 / 100</span></div><p id="milestone-description">Earn 100 Pokécoins to begin your trainer journey.</p><div class="progress"><div id="milestone-progress"></div></div></div></section>
+<div class="field-note"><span>FIELD NOTE 001</span><p>Your Pokémon keep collecting while you’re away.<br>Come back to up to 8 hours of offline earnings.</p></div>
+</section>
+<section class="shop-column"><div class="shop-heading"><div><span class="eyebrow">BETTER TOGETHER</span><h2>Build your dream team<span>.</span></h2></div><span class="team-count" id="species-count">0 / 6</span></div><div class="tabs" role="tablist" aria-label="Shop category"><button id="team-tab" role="tab" aria-selected="true" aria-controls="team-panel">Pokémon <span>6</span></button><button id="upgrades-tab" role="tab" aria-selected="false" aria-controls="upgrades-panel">Upgrades <span>3</span></button></div><div class="shop-caption"><span id="shop-description">Little companions. Big earning potential.</span><span>BUY ×1</span></div><div id="team-panel" role="tabpanel" aria-labelledby="team-tab"></div><div id="upgrades-panel" role="tabpanel" aria-labelledby="upgrades-tab" hidden></div><div class="shop-tip"><span>↗</span><p>A growing team is a thriving team.<br><strong>Each Pokémon earns coins automatically.</strong></p></div></section>
+</div>
+</main><footer><span><span class="mini-ball"></span> Made for the joy of the journey.</span><span>Unofficial fan game · Not affiliated with Nintendo or The Pokémon Company</span></footer>
+<div id="toast" role="status" aria-live="polite"></div>
+<dialog id="settings-dialog"><div class="dialog-heading"><h2>Your adventure, saved.</h2><button class="icon-button" id="close-settings" aria-label="Close settings">×</button></div><p>Progress saves automatically every 5 seconds and when you leave. Export a backup to take your team with you.</p><div class="settings-actions"><button id="save-now">Save now</button><button id="export-save">Export save</button><label class="file-button">Import save<input type="file" id="import-save" accept="application/json,.json"></label></div><p class="subtle">Importing a save replaces your current progress.</p><hr><button id="reset" class="danger">Start a new adventure</button><div id="reset-confirm" hidden><p>Reset all coins, Pokémon and upgrades? This cannot be undone.</p><button id="confirm-reset" class="danger">Yes, reset my progress</button><button id="cancel-reset">Keep playing</button></div></dialog>
+<script type="module" src="app.js"></script></body></html>
